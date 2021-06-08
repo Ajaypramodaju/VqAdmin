@@ -10,6 +10,8 @@ function Login() {
     const [password, setPassword] = useState('')
     const { user, login, error } = useAuthContext()
 
+   
+
     return (
         (!!!user && (
             <WelcomeScreen>
@@ -60,7 +62,7 @@ const Card = styled.div`
     padding: 20px;
     margin: auto;
     margin-bottom: 30px;
-    max-width: 450px;
+    max-width: 400px;
     width: 100%;
 `
 

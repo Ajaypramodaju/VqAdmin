@@ -115,16 +115,17 @@ function BugReports() {
                             alignItems="center"
                             justifyContent="center"
                         >
-                            <p>Other App</p>
+                            <p>Client App</p>
                             <Switch
                                 checked={rajatApp}
-                                disabled
+                                enabled
+                                // disabled
                                 onChange={(e) => setRajatApp(e.target.checked)}
                                 inputProps={{
                                     'aria-label': 'secondary checkbox'
                                 }}
                             />
-                            <p>Rajat App</p>
+                            <p>User App</p>
                         </Box>
                     </Box>
                     <Tabs
@@ -151,7 +152,7 @@ function BugReports() {
                                 <TableRow>
                                     <TableCell align="center">Sl.No.</TableCell>
                                     <TableCell>User Id</TableCell>
-                                    <TableCell>Time</TableCell>
+                                    {/* <TableCell>Time</TableCell> */}
                                     <TableCell>Bug</TableCell>
                                     {value === 0 && (
                                         <TableCell align="center">
@@ -177,9 +178,9 @@ function BugReports() {
                                                     <TableCell>
                                                         {item?.userID}
                                                     </TableCell>
-                                                    <TableCell>
+                                                    {/* <TableCell>
                                                         {item?.time}
-                                                    </TableCell>
+                                                    </TableCell> */}
                                                     <TableCell>
                                                         {item?.bug}
                                                     </TableCell>
@@ -213,9 +214,9 @@ function BugReports() {
                                                     <TableCell>
                                                         {item?.userID}
                                                     </TableCell>
-                                                    <TableCell>
+                                                    {/* <TableCell>
                                                         {item?.time}
-                                                    </TableCell>
+                                                    </TableCell> */}
                                                     <TableCell>
                                                         {item?.bug}
                                                     </TableCell>
