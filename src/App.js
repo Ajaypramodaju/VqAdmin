@@ -17,7 +17,7 @@ function App() {
       renderer: 'svg', 
       loop: false,
       autoplay: true,
-      animationData: require('./inext.json')
+      animationData: require('./inext2.json')
     })
     }, [])
     return (
@@ -44,7 +44,7 @@ const Card = styled.div`
     padding: 1px;
     margin: auto;
     margin-bottom: 1px;
-    max-width: 150px;
+    max-width: 250px;
     width: 100%;
 `
 

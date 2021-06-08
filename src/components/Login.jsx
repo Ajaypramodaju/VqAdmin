@@ -4,12 +4,23 @@ import { Redirect } from 'react-router'
 import styled from 'styled-components'
 import { useAuthContext } from './contexts/AuthContext'
 import { navDirections } from './utils/navDirections'
-
+// import React, { useEffect, useRef } from 'react';
+// import lottie from 'lottie-web';
 function Login() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const { user, login, error } = useAuthContext()
+    // const container = useRef(null)
 
+    // useEffect(() => {
+    //  lottie.loadAnimation({
+    //   container: container.current,
+    //   renderer: 'svg', 
+    //   loop: false,
+    //   autoplay: true,
+    //   animationData: require('./inext2.json')
+    // })
+    // }, [])
    
 
     return (
@@ -17,6 +28,11 @@ function Login() {
             <WelcomeScreen>
                 <Container>
                     <Card>
+                        {/* <Card1>
+                        <div className="App">
+                        <div className="container" ref={container}></div>
+                        </div>
+                        </Card1> */}
                         <Heading>Welcome Admin</Heading>
                         {!!error && <ErrorMsg>{error}</ErrorMsg>}
 
@@ -45,7 +61,7 @@ function Login() {
 }
 
 const WelcomeScreen = styled.div`
-    min-height: 100vh;
+    min-height: 10vh;
     padding-top: 40px;
     width: 100%;
     display: flex;
@@ -65,7 +81,18 @@ const Card = styled.div`
     max-width: 400px;
     width: 100%;
 `
-
+// const Card1 = styled.div`
+//     background: #ffffff;
+//     border: 1px solid #dddddd;
+//     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.07);
+//     border-radius: 5px;
+//     align-items: center;
+//     padding: 1px;
+//     margin: auto;
+//     margin-bottom: 1px;
+//     max-width: 250px;
+//     width: 100%;
+// `
 const Heading = styled.h1`
     color: #252b42;
     text-align: center;
